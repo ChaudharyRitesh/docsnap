@@ -1,0 +1,23 @@
+{
+  "name": "docsnap",
+  "version": "1.0.0",
+  "description": "",
+  "private": "true",
+  "scripts": {
+    "format": "prettier \"{apps,libs}/**/*.{ts,tsx,js,json}\" --ignore-path .gitignore",
+    "format:check": "pnpm format --check",
+    "format:write": "pnpm format --write",
+    "tsc": "pnpm --parallel -r run tsc",
+    "lint": "pnpm --parallel -r run lint",
+    "validate": "pnpm format:write && pnpm tsc && pnpm lint && pnpm -r run build",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "typescript": "^5.6.3",
+    "husky": "^8.0.0"
+  }
+}
