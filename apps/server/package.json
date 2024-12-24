@@ -2,17 +2,13 @@
   "name": "server",
   "version": "1.0.0",
   "description": "server for document summarizer",
-  "main": "app.js",
+  "main": "dist/app.js",
   "author": "Ritesh",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js",
-    "format:check": "pnpm format --check",
-    "format:write": "pnpm format --write",
-    "tsc": "pnpm --parallel -r run tsc",
-    "lint": "pnpm --parallel -r run lint",
-    "build": "pnpm --parallel -r run build"
+    "start": "node dist/app.js",
+    "dev": "nodemon src/app.ts",
+    "build": "pnpm exec tsc --project tsconfig.json"
   },
   "dependencies": {
     "express": "^4.17.1",
